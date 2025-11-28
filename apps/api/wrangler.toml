@@ -1,4 +1,4 @@
-name = "telegramify-markdown"
+name = "md2tg-api"
 main = "src/worker.js"
 workers_dev = true
 preview_urls = false

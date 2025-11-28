@@ -1,6 +1,6 @@
 {
   "main": ".open-next/worker.js",
-  "name": "markdown-to-telegram-converter",
+  "name": "md2tg-web",
   "compatibility_date": "2025-03-25",
   "compatibility_flags": ["nodejs_compat"],
   "assets": {
