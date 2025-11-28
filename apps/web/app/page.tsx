@@ -1,9 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { Clipboard, Check } from "lucide-react";
+import { Clipboard, Check, Github, Coffee } from "lucide-react";
 import N8nDemo from "@/app/components/N8nDemo";
 import Image from "next/image";
+import Link from "next/link";
 
 const convertToTelegramMarkdownV2 = async (
   rawMarkdown: string
@@ -121,27 +122,70 @@ export default function Home() {
         <aside>
           <p>
             Built using{" "}
-            <a
+            <Link
               href="https://www.npmjs.com/package/telegramify-markdown"
               target="_blank"
               rel="noopener noreferrer"
               className="link"
             >
               telegramify-markdown
-            </a>{" "}
-            and Cloudflare Workers & Pages.
+            </Link>{" "}
+            and{" "}
+            <Link
+              href="https://developers.cloudflare.com/workers/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="link"
+            >
+              Cloudflare Workers & Pages
+            </Link>
+            .
+            <br />
+            This project is fully open source and developed using{" "}
+            <Link
+              href="https://turbo.build/repo"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="link"
+            >
+              Turborepo
+            </Link>
+            .
             <br />
             Built by{" "}
-            <a
+            <Link
               href="https://www.projectstain.dev"
               target="_blank"
               rel="noopener noreferrer"
               className="link"
             >
               projectstain.dev
-            </a>
+            </Link>
           </p>
         </aside>
+        <nav>
+          <div className="grid grid-flow-col gap-4">
+            <Link
+              href="https://github.com/haotiencheng/md2tg-monorepo"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-ghost btn-circle"
+              aria-label="GitHub Repository"
+            >
+              <Github size={24} />
+            </Link>
+            <Link
+              href="https://buymeacoffee.com/projectstain"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-circle border-2 border-yellow-400 bg-yellow-400 hover:bg-yellow-500 hover:border-yellow-500 hover:scale-110 transition-all duration-200 shadow-lg hover:shadow-xl"
+              aria-label="Buy Me a Coffee"
+              style={{ color: '#000' }}
+            >
+              <Coffee size={24} />
+            </Link>
+          </div>
+        </nav>
       </footer>
     </main>
   );
